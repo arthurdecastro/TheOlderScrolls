@@ -137,16 +137,14 @@ void Escreve(void){
 
 	if (dialogoOption == 7) // fala 7
 	{
-		for (int i = 0; i <= strlen(fala7); i++)
-		{
+		for (int i = 0; i <= strlen(fala7); i++){
 			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, fala7[i]);
 		}
 	}
 
 	if (dialogoOption == 8) // fala 8
 	{
-		for (int i = 0; i <= strlen(fala8); i++)
-		{
+		for (int i = 0; i <= strlen(fala8); i++){
 			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, fala8[i]);
 		}
 	}
@@ -204,24 +202,21 @@ void EscreveGameOver(void)
 	//==========================================================
 	if (karma <= 0) // game over ruim
 	{
-		for (int i = 0; i <= strlen(gameOver1); i++)
-		{
+		for (int i = 0; i <= strlen(gameOver1); i++){
 			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, gameOver1[i]);
 		}
 	}
 
 	if (karma > 0 && karma < 80) // game over neutro
 	{
-		for (int i = 0; i <= strlen(gameOver2); i++)
-		{
+		for (int i = 0; i <= strlen(gameOver2); i++){
 			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, gameOver2[i]);
 		}
 	}
 
 	if (karma >= 80) // game over bom
 	{
-		for (int i = 0; i <= strlen(gameOver3); i++)
-		{
+		for (int i = 0; i <= strlen(gameOver3); i++){
 			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, gameOver3[i]);
 		}
 	}
@@ -253,8 +248,7 @@ void Material_Luz()
 }
 
 // função de carregamento de imagem
-int  CarregarImagem(char *NomeArquivo)
-{
+int  CarregarImagem(char *NomeArquivo){
 #define SAIR {fclose(fp_arquivo); return -1;}
 #define CTOI(C) (*(int*)&C)
 
