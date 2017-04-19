@@ -1057,13 +1057,11 @@ void TeclasNormais(unsigned char tecla, int x, int y)
 
 			else if (leste == true || oeste == true)
 			{
-				if (leste == true)
-				{
+				if (leste == true){
 					posx -= velocidade;
 				}
 
-				else
-				{
+				else{
 					posx += velocidade;
 				}
 
@@ -1072,34 +1070,29 @@ void TeclasNormais(unsigned char tecla, int x, int y)
 		}
 
 		// ===================== turn left and right =====================
-		if (tecla == 'A' || tecla == 'a')
-		{
-			if (oeste == false && norte == true)
-			{
+		if (tecla == 'A' || tecla == 'a'){
+			if (oeste == false && norte == true){
 				oeste = true;
 				leste = false;
 				norte = false;
 				sul = false;
 			}
 
-			else if (oeste == true)
-			{
+			else if (oeste == true){
 				sul = true;
 				leste = false;
 				oeste = false;
 				norte = false;
 			}
 
-			else if (oeste == false && sul == true)
-			{
+			else if (oeste == false && sul == true){
 				sul = false;
 				oeste = false;
 				leste = true;
 				norte = false;
 			}
 
-			else if (leste == true)
-			{
+			else if (leste == true){
 				sul = false;
 				leste = false;
 				oeste = false;
@@ -1107,8 +1100,7 @@ void TeclasNormais(unsigned char tecla, int x, int y)
 			}
 		}
 
-		else if (tecla == 'D' || tecla == 'd')
-		{
+		else if (tecla == 'D' || tecla == 'd'){
 			if (leste == false && norte == true)
 			{
 				leste = true;
@@ -1117,24 +1109,21 @@ void TeclasNormais(unsigned char tecla, int x, int y)
 				sul = false;
 			}
 
-			else if (leste == true)
-			{
+			else if (leste == true){
 				sul = true;
 				leste = false;
 				oeste = false;
 				norte = false;
 			}
 
-			else if (leste == false && sul == true)
-			{
+			else if (leste == false && sul == true){
 				sul = false;
 				leste = false;
 				oeste = true;
 				norte = false;
 			}
 
-			else if (oeste == true)
-			{
+			else if (oeste == true){
 				sul = false;
 				leste = false;
 				oeste = false;
@@ -1147,86 +1136,74 @@ void TeclasNormais(unsigned char tecla, int x, int y)
 
 	// resposta[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
-	if (dialogo == true)
-	{
+	if (dialogo == true){
 		// Q == Sim == 0
 
-		if (tecla == 'Q' || tecla == 'q' && kill != true)
-		{
-			if (dialogoOption == 0)
-			{
+		if (tecla == 'Q' || tecla == 'q' && kill != true){
+			if (dialogoOption == 0){
 				resposta[0] = 0;
 				karma = karma + 10;
 
 				dialogoOption = 1;
 			}
 
-			else if (dialogoOption == 1)
-			{
+			else if (dialogoOption == 1){
 				resposta[1] = 0;
 				kill = true;
 
 				dialogoOption = 2;
 			}
 
-			else if (dialogoOption == 2)
-			{
+			else if (dialogoOption == 2){
 				resposta[2] = 0;
 				karma = karma + 10;
 
 				dialogoOption = 3;
 			}
 
-			else if (dialogoOption == 3)
-			{
+			else if (dialogoOption == 3){
 				resposta[3] = 0;
 				kill = true;
 				
 				dialogoOption = 9;
 			}
 
-			else if (dialogoOption == 4)
-			{
+			else if (dialogoOption == 4){
 				resposta[4] = 0;
 				kill = true;
 
 				dialogoOption = 5;
 			}
 
-			else if (dialogoOption == 5)
-			{
+			else if (dialogoOption == 5){
 				resposta[5] = 0;
 				karma = karma - 5;
 
 				dialogoOption = 6;
 			}
 
-			else if (dialogoOption == 6)
-			{
+			else if (dialogoOption == 6){
 				resposta[6] = 0;
 				karma = karma + 10;
 
 				dialogoOption = 7;
 			}
 
-			else if (dialogoOption == 7)
-			{
+			else if (dialogoOption == 7){
 				resposta[7] = 0;
 				karma = karma + 10;
 
 				dialogoOption = 10;
 			}
 
-			else if (dialogoOption == 8)
-			{
+			else if (dialogoOption == 8){
 				resposta[8] = 0;
 				kill = true;
 
 				dialogoOption = 9;
 			}
 			
-			if (dialogoOption == 9)
-			{
+			if (dialogoOption == 9){
 				kill = true;
 				dialogoOption = 10;
 			}
@@ -1234,75 +1211,65 @@ void TeclasNormais(unsigned char tecla, int x, int y)
 
 		// E == Não == 1
 
-		if (tecla == 'E' || tecla == 'e' && kill != true)
-		{
+		if (tecla == 'E' || tecla == 'e' && kill != true){
 
-			if (dialogoOption == 0)
-			{
+			if (dialogoOption == 0){
 				resposta[0] = 1;
 				karma = karma - 10;
 
 				dialogoOption = 8;
 			}
 
-			else if (dialogoOption == 1)
-			{
+			else if (dialogoOption == 1){
 				resposta[1] = 1;
 				karma = karma + 10;
 
 				dialogoOption = 2;
 			}
 
-			else if (dialogoOption == 2)
-			{
+			else if (dialogoOption == 2){
 				resposta[2] = 1;
 				karma = karma - 10;
 
 				dialogoOption = 3;
 			}
 
-			else if (dialogoOption == 3)
-			{
+			else if (dialogoOption == 3){
 				resposta[3] = 1;
 				karma = karma + 10;
 
 				dialogoOption = 4;
 			}
 
-			else if (dialogoOption == 4)
-			{
+			else if (dialogoOption == 4){
 				resposta[4] = 1;
 				karma = karma + 10;
 
 				dialogoOption = 5;
 			}
 
-			else if (dialogoOption == 5)
-			{
+			else if (dialogoOption == 5){
 				resposta[5] = 1;
 				karma = karma + 10;
 
 				dialogoOption = 6;
 			}
 
-			else if (dialogoOption == 6)
-			{
+			else if (dialogoOption == 6){
 				resposta[6] = 1;
 				karma = karma - 5;
 
 				dialogoOption = 7;
 			}
 
-			else if (dialogoOption == 7)
-			{
+			else if (dialogoOption == 7){
 				resposta[7] = 1;
 				karma = karma - 5;
 
 				dialogoOption = 10;
 			}
 
-			else if (dialogoOption == 8)
-			{
+			else if (dialogoOption == 8){
 				resposta[8] = 1;
 				karma = karma + 5;
 
@@ -1310,16 +1277,15 @@ void TeclasNormais(unsigned char tecla, int x, int y)
 			}
 
 
-			if (dialogoOption == 9)
-			{
+			if (dialogoOption == 9){
 				kill == true;
 				dialogoOption = 10;
 			}
 		}
 	}
 
-	if (tecla == 'R' || tecla == 'r') // reset no jogo
-	{
+	// reset no jogo
+	if (tecla == 'R' || tecla == 'r'){
 		posx = 1;
 		posz = -1; 
 		pos_x = 1.0;
@@ -1342,22 +1308,18 @@ void TeclasNormais(unsigned char tecla, int x, int y)
 	}
 	
 	// ativar debug
-	if (tecla == 'P' || tecla == 'p')
-	{
-		if (debug == false)
-		{
+	if (tecla == 'P' || tecla == 'p'){
+		if (debug == false){
 			debug = true;
 		}
 
-		else
-		{
+		else{
 			debug = false;
 		}	
 	}
 
 	// debug
-	if (debug == true)
-	{		
+	if (debug == true){		
 		cout << "============ DEBUG ==============" << endl;
 		cout << "norte = " << norte << endl;
 		cout << "sul = " << sul << endl;
@@ -1377,8 +1339,7 @@ void TeclasNormais(unsigned char tecla, int x, int y)
 
 	// 'ESC' = sair do jogo
 
-	if (GetAsyncKeyState(VK_ESCAPE))
-	{
+	if (GetAsyncKeyState(VK_ESCAPE)){
 		exit(0);
 	}
 
@@ -1386,27 +1347,21 @@ void TeclasNormais(unsigned char tecla, int x, int y)
 }
 
 //Função para tratamento de teclas especiais chamada pela main
-void TeclasEspeciais(int tecla, int x, int y)
-{
-	if (debug == true)
-	{
+void TeclasEspeciais(int tecla, int x, int y){
+	if (debug == true){
 		// mudar fov
-		if (tecla == GLUT_KEY_RIGHT)
-		{
+		if (tecla == GLUT_KEY_RIGHT){
 			fov += 1;
 		}
-		else if (tecla == GLUT_KEY_LEFT)
-		{
+		else if (tecla == GLUT_KEY_LEFT){
 			fov -= 1;
 		}
 
 		// mudar o dialogo atual
-		else if (tecla == GLUT_KEY_UP)
-		{
+		else if (tecla == GLUT_KEY_UP){
 			dialogoOption += 1;
 		}
-		else if (tecla == GLUT_KEY_DOWN)
-		{
+		else if (tecla == GLUT_KEY_DOWN){
 			dialogoOption -= 1;
 		}
 
