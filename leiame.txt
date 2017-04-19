@@ -1,0 +1,29 @@
+/*----------------------------------------------------
+THE OLDER SCROLLS 1: DUIABOEL (v.1.0)
+
+Programação: Arthur de Castro
+Arte: Arthur Schunemann (e alguns materiais que não 
+deviamos usar. Será removido no próximo update)
+
+TOS:D segue um gameplay que se assemelha a jogos de RPG
+e Aventura da década de 1990. 
+
+Controles:
+
+W - Avançar
+S - Retroceder
+A - Virar para a esquerda
+D - Virar para a direita
+Q - "Sim"
+E - "Não"
+R - "New Game"
+Esc - Exit
+
+P - Ativa o Debug
+
+Opções do Debug:
+
+Mudar Fov - Setas para Esquerda/Direita
+Mudar o diálogo atual - setas para Cima/Baixo
+
+------------------------------------------------------*/
