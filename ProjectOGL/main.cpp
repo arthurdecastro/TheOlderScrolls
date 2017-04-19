@@ -222,10 +222,9 @@ void EscreveGameOver(void)
 	}
 }
 
-// ================= TEXTURE =====================
+// ================= TEXTURE ====================
 
-void Material_Luz()
-{
+void Material_Luz(){
 	GLfloat *tex;
 
 	//Definição das propriedades dos materiais
