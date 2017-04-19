@@ -38,8 +38,7 @@ E - "Não"
 #include <string.h>
 using namespace std;
 
-extern "C"
-{
+extern "C"{
 	#include "glm.h"
 }
 
@@ -72,8 +71,7 @@ bool kill = false; // quando true, mata o personagem
 ------------------------------------------------------------------------------------*/
 
 // Falas da NPC
-void Escreve(void) 
-{
+void Escreve(void){
 	char fala0[100] = "Voce nao me parece confiavel. Voce luta por Daria?";
 	char fala1[100] = "Entao diga: Apoias o rei?";
 	char fala2[100] = "A rainha?";
@@ -90,59 +88,49 @@ void Escreve(void)
 	glRasterPos3f(-3.5, 0.8, -1.6); //Posição da palavra
 	
 	// ============================== FALAS ================================
-	if (dialogoOption == 0) // fala 0
-	{
+	if (dialogoOption == 0){	// fala 0
 		//Uso do "for" para escrever mais de um caracter
-		for (int i = 0; i <= strlen(fala0); i++)
-		{
+		for (int i = 0; i <= strlen(fala0); i++){
 			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, fala0[i]);
 		}		
 	}
 
-	if (dialogoOption == 1) // fala 1
-	{
-		for (int i = 0; i <= strlen(fala1); i++)
-		{
+	if (dialogoOption == 1){ // fala 1	
+		for (int i = 0; i <= strlen(fala1); i++){
 			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, fala1[i]);
 		}
 	}
 
-	if (dialogoOption == 2) // fala 2
-	{
-		for (int i = 0; i <= strlen(fala2); i++)
-		{
+	if (dialogoOption == 2){ // fala 2
+		for (int i = 0; i <= strlen(fala2); i++){
 			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, fala2[i]);
 		}
 	}
 
 	if (dialogoOption == 3) // fala 3
 	{
-		for (int i = 0; i <= strlen(fala3); i++)
-		{
+		for (int i = 0; i <= strlen(fala3); i++){
 			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, fala3[i]);
 		}
 	}
 
 	if (dialogoOption == 4) // fala 4
 	{
-		for (int i = 0; i <= strlen(fala4); i++)
-		{
+		for (int i = 0; i <= strlen(fala4); i++){
 			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, fala4[i]);
 		}
 	}
 
 	if (dialogoOption == 5) // fala 5
 	{
-		for (int i = 0; i <= strlen(fala5); i++)
-		{
+		for (int i = 0; i <= strlen(fala5); i++){
 			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, fala5[i]);
 		}
 	}
 
 	if (dialogoOption == 6) // fala 6
 	{
-		for (int i = 0; i <= strlen(fala6); i++)
-		{
+		for (int i = 0; i <= strlen(fala6); i++){
 			glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, fala6[i]);
 		}
 	}
